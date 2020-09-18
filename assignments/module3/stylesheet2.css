@@ -25,18 +25,13 @@
 	margin-right:20px;
 }
 
-#but {
-border:solid;
-	border-color:black;
-	background-color:green;
 
-}
 
 #but{
-	height:35px;
+	height:40px;
 	position:relative;
 	top:10px;
-	width:20px;
+
 	bottom:1px;
 	float:right;
 
