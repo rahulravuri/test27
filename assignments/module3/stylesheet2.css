@@ -25,6 +25,11 @@
 	margin-right:20px;
 }
 
+#but span{
+border:solid;
+
+}
+
 #but{
 	height:35px;
 	position:relative;
