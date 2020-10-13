@@ -9,7 +9,7 @@
 	$scope.name ;
 	$scope.z;
 	$scope.click = function(){
-	 if(!$scope.name){console.log("no"); $scope.z ="pls enter correct data";
+	 if(!$scope.name||$scope.name==","){console.log("no"); $scope.z ="pls enter correct data";
 	 document.getElementById("data").style.color='red';}
      else{
 		document.getElementById("data").style.color='black';
@@ -26,9 +26,10 @@
 			 if(y[i]==""){console.log("no")}
 			 else{z1=z1+1;}
 
-		  }	
+		  }
+	       if(z1>0){
 		  if (z1<=3){$scope.z="enjoy"}
-		  else{$scope.z="Too much"}
+		  else{$scope.z="Too much"}}
 	 }
 	
 		
