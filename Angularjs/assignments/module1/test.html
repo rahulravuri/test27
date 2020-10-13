@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Lunch Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript"  src="angular.min.js" ></script>
+	<script type="text/javascript"  src="apps.js" ></script>
+
+    <style>
+      .message { font-size: 1.3em; font-weight: bold; }
+    </style>
+  </head>
+<body ng-app = "Lunch">
+   <div class="container" ng-controller = "fun">
+     <h1>Lunch Checker</h1>
+
+         <div class="form-group">
+             <input id="lunch-menu" type="text"  ng-model="name"
+             placeholder="list comma separated dishes you usually have for lunch"
+             class="form-control">
+         </div>
+         <div class="form-group">
+             <button class="btn btn-default" ng-click="click();">Check If Too Much</button>
+         </div>
+         <div class="form-group message">
+           <!-- Your message can go here. -->
+		   <p >Not considering empty value as input<br> </p><p id="data">{{z}} </p>
+         </div>
+   </div>
+
+</body>
+</html>
