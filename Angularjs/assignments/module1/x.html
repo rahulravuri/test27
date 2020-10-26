@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Shopping List Check Off</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="text/javascript"  src="angular.min.js" ></script>
+  	<script type="text/javascript"  src="x.js" ></script>
+    <style>
+      .emptyMessage {
+        font-weight: bold;
+        color: red;
+        font-size: 1.2em;
+      }
+      li {
+        margin-bottom: 7px;
+        font-size: 1.2em;
+      }
+      li > button {
+        margin-left: 6px;
+      }
+      button > span {
+        color: green;
+      }
+    </style>
+  </head>
+<body ng-app = "Lu">
+  <div class="container">
+  <h1>Shopping List Check Off</h1>
+
+  <div class="row">
+
+    <!-- To Buy List -->
+    <div class="col-md-6 " ng-controller ="datataking as dt">
+     <h2>To Buy:</h2>
+	      <ul>
+       <li ng-repeat="items in dt.tobuy">buy {{items.quantity}} {{items.name}} <button ng-click="dt.add($index)">add {{items.name}}</button></li>
+     </ul>
+
+     
+	 
+       
+      <h1 class="emptyMessage" ng-if="dt.tobuy[0].name==null">Everything is bought!</h1>
+    </div>
+
+    <!-- Already Bought List -->
+    <div class="col-md-6" ng-controller ="datashowing as ds">
+     <h2>Already Bought:</h2>
+     <ul>
+       <li ng-repeat="items in ds.items">bought {{items.quantity}} {{items.name}}</li>
+     </ul>
+     <div class="emptyMessage" ng-if="ds.items[0].name==null">Nothing bought yet.</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
