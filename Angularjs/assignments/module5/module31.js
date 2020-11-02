@@ -95,7 +95,7 @@ function datachecking(httpservice,$scope){
 	 else{xdc.error=
 		 true;
 	      xdc.datainfo =[];
-		 
+		 console.log("Nothing found")
 		 
 	 }
 	 
