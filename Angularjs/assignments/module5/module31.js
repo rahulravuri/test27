@@ -94,6 +94,7 @@ function datachecking(httpservice,$scope){
 	 }
 	 else{xdc.error=
 		 true;
+	      xdc.datainfo =[];
 		 
 		 
 	 }
