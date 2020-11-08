@@ -1,0 +1,7 @@
+<div ng-controller = "menucontroller as menu">
+<button class=" button btn btn-primary" ui-sref="Home">home</button>
+<div class="container c">
+<ul>
+<li class= "list col-sm-4 col-md-3 col-xs-12" ng-repeat="data in menu.items"   ui-sref="Categories({sn:$index})">{{data.name}}</li>
+</ul></div>
+</div>
