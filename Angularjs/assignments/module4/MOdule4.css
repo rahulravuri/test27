@@ -1,0 +1,42 @@
+
+h1{display:inline-block;}
+
+.button{
+	
+	float:right;
+	margin:30px;
+	
+}
+
+body{
+	background-color:#F5F5DC;
+		 width:100%;
+	 height:100%;
+}
+
+
+.container{
+	clear:both;
+
+	
+
+	
+	
+}
+.list{
+	list-style:none;
+	border:solid green;
+	margin:3px;
+	height:15px;
+
+	
+}
+
+.list:hover{
+	
+	background-color:blue;
+	
+	
+}
+
+
