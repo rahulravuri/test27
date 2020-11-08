@@ -17,7 +17,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
 	  
 	  url:'/',
 
-	  templateUrl:'Templates/Home.html'
+	  templateUrl:'Home.html'
 	  
 	  
 })
@@ -26,7 +26,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
 	  
 	  url:'/Menu',
 	 
-	  templateUrl:'Templates/Menu.html',
+	  templateUrl:'Menu.html',
 	  
 	  controllers:'menu as menucontroller',
 	  
@@ -38,7 +38,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
 	  
 	  url:'/Categories/{sn}',
 	 
-	  templateUrl:'Templates/categories.html',
+	  templateUrl:'categories.html',
 	  
 	 resolve:{
 	  items1:['$stateParams',function($stateParams){
