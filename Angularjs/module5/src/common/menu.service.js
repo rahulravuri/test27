@@ -1,12 +1,12 @@
 (function () {
 "use strict";
 
-angular.module('common')
+angular.module('common',[])
 .service('MenuService', MenuService);
 
 
-MenuService.$inject = ['$http', 'ApiPath'];
-function MenuService($http, ApiPath) {
+MenuService.$inject = ['$http'];
+function MenuService($http) {
   var service = this;
 
   service.getCategories = function () {
