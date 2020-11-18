@@ -27,6 +27,27 @@ function MenuService($http) {
     });
   };
 
+   service.getsingleMenuItems = function (category) {
+    var config = {};
+    if (category) {
+      config.params = {'name': name};
+    }
+
+    return $http.get('https://www.davidchuschinabistro.com/menu_items/'+category+'.json').then(function (response) {
+      return response.data;
+    },function(){
+		var error="NOt found";
+		return error;
+		
+	});
+  };
+
+   console.log(service.getsingleMenuItems('L').then(function(response){
+	   
+	   return response;
+	   
+   }) 	);
+
 }
 
 
