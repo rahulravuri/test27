@@ -25,9 +25,9 @@
   }
   
   
-  signiingup.$inject=['datacollection'];
+  signiingup.$inject=['datacollection','MenuService'];
   
-  function signiingup(datacollection){
+  function signiingup(datacollection,MenuService){
 	  
 	  
 	  
@@ -41,19 +41,51 @@
 	  
 	  
 	  };
-
 	  
+	  x.null1="not now";
+	  x.null2="not now";
+ var s=MenuService.getsingleMenuItems('L');
+		  console.log(s);
+		  if (s="NOt found"){
+			  
+			  console.log("issue");
+			  
+		  }
+
+	   
 	 
 	  x.submit = function(){
-		  x.category1=x.user.category;
+		  
+		 MenuService.getsingleMenuItems(x.user.category).then(function(response){
+			  console.log(response);
+			  x.check = response;
+			  if (x.check!="NOt found"){
+			   x.null1="found";
+			   x.null2="";
+			  console.log("found");
+			 
+			  x.category1=x.user.category;
 		  datacollection.info = x.user;
 		  console.log("doing");
 		  console.log(datacollection.info);
-	  };
+			  
+		  }
+		 
+		 else{
+			 x.null2="found";
+			 x.null1="";
+			 datacollection.info.username="";
+			 
+		 }
+			  
+		  });
+		  
+		  
+		  
 	  
   }
   
-  
+  }
   infodetails.$inject=['datacollection'];
   
   function infodetails(datacollection){
