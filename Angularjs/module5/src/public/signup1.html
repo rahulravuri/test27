@@ -7,7 +7,7 @@
  
     
 
-        Name :<input type="text" name="username" placeholder="Pick a username"  style="color:black;text-align:center"
+       <p style="color:black;width:80px;display:inline-block;font-weight: bold;"> Name:</p><input type="text" name="username" placeholder="Pick a username"  style="color:black;text-align:center;width:60%;margin: 5px;"
           ng-model="signup.user.username"
           required
           minlength="4"
@@ -22,7 +22,7 @@
           </span>
           <br>
 
-          Emailid:<input type="email" name="email" style="color:black;text-align:center"
+          <p style="color:black;width:80px;display:inline-block;font-weight: bold;">Emailid:</p><input type="email" name="email" style="color:black;text-align:center;width:60%;margin: 5px;"
           ng-model="signup.user.email"
           required>
           <span ng-if="regForm.email.$invalid && regForm.email.$touched">
@@ -30,14 +30,14 @@
           </span>
           <br>
 
-        Number:<input type="text" name="phone"  style="color:black;text-align:center"
+       <p style="color:black;width:80px;display:inline-block;font-weight: bold;"> Number:</p><input type="text" name="phone"  style="color:black;text-align:center;width:60%;margin: 5px;"
           ng-model="signup.user.phone" required
           >
           <span ng-if="regForm.phone.$error.required && regForm.phone.$touched">
             please enter number
           </span>
           <br>
-		  category:<input type="text" name="cat"  style="color:black;text-align:center"
+		  <p style="color:black;width:80px;display:inline-block;font-weight: bold;">category:</p><input type="text" name="cat"  style="color:black;text-align:center;width:60%;margin: 5px;"
           ng-model="signup.user.category" oninput="this.value = this.value.toUpperCase()"
           >{{signup.user.category}}
           
