@@ -8,6 +8,7 @@ angular.module('common',[])
 MenuService.$inject = ['$http'];
 function MenuService($http) {
   var service = this;
+  console.log("happening");
 
   service.getCategories = function () {
     return $http.get('http://davids-restaurant.herokuapp.com/categories.json').then(function (response) {
